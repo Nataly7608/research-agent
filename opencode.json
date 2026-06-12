@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "researcher",
+  "instructions": ["AGENTS.md"],
+  "agent": {
+    "researcher": {
+      "description": "Агент для исследований и анализа информации",
+      "mode": "primary",
+      "permission": {
+        "edit": "allow",
+        "bash": "ask",
+        "read": "allow",
+        "websearch": "allow",
+        "webfetch": "allow"
+      }
+    }
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp"],
+      "enabled": true
+    }
+  },
+  "skills": {
+    "paths": [".opencode/skills"]
+  }
+}

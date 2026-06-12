@@ -1,0 +1,39 @@
+# --- Операционная система ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.swp
+
+# --- IDE и редакторы ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Системные директории OpenCode (генерятся автоматически) ---
+.opencode/node_modules/
+.opencode/package-lock.json
+
+# --- Временные файлы исследований ---
+research/tmp/
+
+# --- Файлы с секретами/токенами ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- Git-репозиторий (сам .git не попадает) ---
+.git/
+
+# --- Кэш и метаданные ---
+.cache/
