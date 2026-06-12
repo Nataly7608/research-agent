@@ -25,6 +25,10 @@ yarn-error.log*
 # --- Временные файлы исследований ---
 research/tmp/
 
+# --- Локальные настройки и переопределения ---
+.opencode/setting.local.json
+.opencode/*.local.json
+
 # --- Файлы с секретами/токенами ---
 .env
 .env.local
