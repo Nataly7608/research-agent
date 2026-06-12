@@ -15,8 +15,9 @@
 | 3 | **Проверка структуры и отчёт** | Проанализировано расположение настроек (3 уровня), создан текстовый отчёт `reports/structure-report.txt` |
 | 4 | **Git-репозиторий и GitHub** | Инициализирован git, создан `.gitignore`, сохранён лог переписки, проект отправлен на GitHub |
 | 5 | **Локальный файл настроек** | Создан `.opencode/setting.local.json` для переопределения конфигурации под локальную машину (bash: allow, headless: false, development-режим) |
-| 6 | **Дополнение агента** | Файл `researcher.md` обогащён практиками из проекта `pa-finance.2`: строка статуса, коммуникация, процесс работы, альтернативный формат нейминга |
-| 7 | **Валидация** | Проверен нейминг файлов (выявлено 1 нарушение — `AGENTS.md` в upper case), актуальность отчёта, полнота отправки в git |
+| 6 | **Дополнение инструкций** | Файл `AGENTS.md` обновлён из `pa-finance.2/agent.md`: строка статуса, процесс работы, коммуникация, нейминг. Из `researcher.md` убраны дублирующие разделы |
+| 7 | **Синхронизация файлов** | После обновления `AGENTS.md` приведены в соответствие: `researcher.md`, `conclusions.md`, `reports/structure-report.txt` |
+| 8 | **Валидация** | Проверен нейминг файлов (выявлено 1 нарушение — `AGENTS.md` в upper case), актуальность отчёта, полнота отправки в git |
 
 ---
 
@@ -42,13 +43,13 @@
 research-agent/
 ├── .gitignore                              # Правила игнорирования
 ├── opencode.json                           # Проектные настройки
-├── AGENTS.md                               # Инструкции верхнего уровня
+├── AGENTS.md                               # Инструкции верхнего уровня (44 строки)
 ├── .opencode/
 │   ├── .gitignore
 │   ├── package.json
 │   ├── setting.local.json                  # Локальные переопределения
 │   ├── agents/
-│   │   └── researcher.md                   # Описание агента (129 строк)
+│   │   └── researcher.md                   # Описание агента (91 строка)
 │   └── skills/                             # Готова к расширению
 ├── research/
 │   ├── cli-agent-creation.md               # Документация архитектуры
@@ -64,8 +65,8 @@ research-agent/
 |:-:|------|--------|-----------|
 | 1 | `opencode.json` | 644 B | Конфигурация |
 | 2 | `.opencode/setting.local.json` | 416 B | Конфигурация (локальная) |
-| 3 | `AGENTS.md` | 580 B | Инструкции |
-| 4 | `.opencode/agents/researcher.md` | 7.3 KB | Описание агента |
+| 3 | `AGENTS.md` | ~1.2 KB | Инструкции верхнего уровня |
+| 4 | `.opencode/agents/researcher.md` | 5.9 KB | Описание агента (роль, безопасность, нейминг, процесс) |
 | 5 | `.opencode/package.json` | 64 B | Служебный |
 | 6 | `.opencode/.gitignore` | 63 B | Служебный |
 | 7 | `.gitignore` | 878 B | Служебный |
@@ -77,9 +78,12 @@ research-agent/
 ### 3.3. Git-репозиторий
 
 ```
-6 коммитов:
+9 коммитов:
+da80b1e  Update AGENTS.md with pa-finance.2 content
+6de1605  Update report: add conclusions.md to file list and structure
+2cee02a  Add conclusions.md — project results, methods, and metrics
 c38a5c5  Supplement agent.md from pa-finance.2
-c71d59c  Update structure report: add setting.local.json, session-history, 3 config levels
+c71d59c  Update structure report
 fd6e104  Add full conversation log to session-history
 aebc048  Add .opencode/setting.local.json to gitignore
 e9c53d2  Add git commands log to session-history
@@ -90,12 +94,13 @@ e9c53d2  Add git commands log to session-history
 
 | Метрика | Значение |
 |---------|---------|
-| Всего файлов (без node_modules) | 11 |
-| Всего строк в проекте | ~1 500+ |
+| Всего файлов (без node_modules) | 12 |
+| Всего строк в проекте | ~1 600+ |
 | Инструментов Playwright MCP | 22 |
 | Уровней настроек | 3 (global → agent → local) |
-| Разделов в agent.md | 6 (роль, безопасность, нейминг, статус, коммуникация, процесс) |
-| Git-коммитов | 6 |
+| Разделов в researcher.md | 5 (роль, безопасность, нейминг, общие правила, процесс) |
+| Строк в AGENTS.md | 44 |
+| Git-коммитов | 9 |
 | Удалённый репозиторий | https://github.com/Nataly7608/research-agent |
 
 ---
@@ -108,7 +113,7 @@ e9c53d2  Add git commands log to session-history
 - **Подключённый MCP-сервер** Playwright — 22 инструмента для веб-скрапинга и браузерной автоматизации
 - **Чёткую документацию** — архитектура, инструкции, правила нейминга, лог сессии, текстовый отчёт
 - **Трёхуровневую конфигурацию** — глобальная (opencode.json) → агентская (researcher.md) → локальная (setting.local.json)
-- **Версионирование** — 6 коммитов в git, опубликовано на GitHub
+- **Версионирование** — 9 коммитов в git, опубликовано на GitHub
 - **Расширяемость** — директория `.opencode/skills/` готова к добавлению новых навыков
 
 Проект готов к использованию и дальнейшему развитию.
