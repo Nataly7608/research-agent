@@ -73,6 +73,62 @@
 
 **Remote:** `https://github.com/Nataly7608/reseach-agent`
 
+### Git-команды (пошагово)
+
+```powershell
+# 1. Проверка текущего git-статуса
+git -C "C:\Users\user\Documents\research-agent" status
+# → Обнаружен родительский .git в C:\Users\user
+
+git -C "C:\Users\user\Documents\research-agent" rev-parse --show-toplevel
+# → C:/Users/user (репозиторий выше уровнем)
+
+# 2. Инициализация нового изолированного репозитория
+git init "C:\Users\user\Documents\research-agent"
+# → Initialized empty Git repository in
+#   C:/Users/user/Documents/research-agent/.git/
+
+# 3. Проверка статуса в новом репозитории
+git -C "C:\Users\user\Documents\research-agent" status
+# → Untracked files: .gitignore, .opencode/, AGENTS.md,
+#   opencode.json, reports/, research/
+
+# 4. Staging всех файлов
+git -C "C:\Users\user\Documents\research-agent" add --all
+
+# 5. Первый коммит
+git -C "C:\Users\user\Documents\research-agent" commit -m "Initial commit"
+# → 7 files changed, 747 insertions(+)
+#   create mode 100644 .gitignore
+#   create mode 100644 .opencode/agents/researcher.md
+#   create mode 100644 AGENTS.md
+#   create mode 100644 opencode.json
+#   create mode 100644 reports/structure-report.txt
+#   create mode 100644 research/cli-agent-creation.md
+#   create mode 100644 research/session-history.md
+
+# 6. Добавление remote (первая попытка — оригинальный URL)
+git -C "C:\Users\user\Documents\research-agent" remote add origin `
+  https://github.com/Nataly7608/reseach-agent
+git -C "C:\Users\user\Documents\research-agent" push -u origin master
+# → remote: Repository not found.
+#   fatal: repository 'https://github.com/Nataly7608/reseach-agent/' not found
+
+# 7. Смена remote на корректный URL (research-agent с буквой r)
+git -C "C:\Users\user\Documents\research-agent" remote set-url origin `
+  https://github.com/Nataly7608/research-agent
+git -C "C:\Users\user\Documents\research-agent" push -u origin master
+# → branch 'master' set up to track 'origin/master'.
+#   To https://github.com/Nataly7608/research-agent
+#    * [new branch]      master -> master
+```
+
+### Итоговый remote
+```
+origin  https://github.com/Nataly7608/research-agent (fetch)
+origin  https://github.com/Nataly7608/research-agent (push)
+```
+
 ---
 
 ## Project Structure (final)
