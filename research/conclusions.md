@@ -15,9 +15,9 @@
 | 3 | **Проверка структуры и отчёт** | Проанализировано расположение настроек (3 уровня), создан текстовый отчёт `reports/structure-report.txt` |
 | 4 | **Git-репозиторий и GitHub** | Инициализирован git, создан `.gitignore`, сохранён лог переписки, проект отправлен на GitHub |
 | 5 | **Локальный файл настроек** | Создан `.opencode/setting.local.json` для переопределения конфигурации под локальную машину (bash: allow, headless: false, development-режим) |
-| 6 | **Дополнение инструкций** | Файл `AGENTS.md` обновлён из `pa-finance.2/agent.md`: строка статуса, процесс работы, коммуникация, нейминг. Из `researcher.md` убраны дублирующие разделы |
-| 7 | **Синхронизация файлов** | После обновления `AGENTS.md` приведены в соответствие: `researcher.md`, `conclusions.md`, `reports/structure-report.txt` |
-| 8 | **Валидация** | Проверен нейминг файлов (выявлено 1 нарушение — `AGENTS.md` в upper case), актуальность отчёта, полнота отправки в git |
+| 6 | **Дополнение инструкций** | Файл `agents.md` обновлён из `pa-finance.2/agent.md`: строка статуса, процесс работы, коммуникация, нейминг. Из `researcher.md` убраны дублирующие разделы |
+| 7 | **Синхронизация файлов** | После обновления `agents.md` приведены в соответствие: `researcher.md`, `conclusions.md`, `reports/structure-report.txt` |
+| 8 | **Валидация** | Проверен нейминг файлов (выявлено 1 нарушение — `agents.md` в upper case), актуальность отчёта, полнота отправки в git |
 
 ---
 
@@ -43,7 +43,7 @@
 research-agent/
 ├── .gitignore                              # Правила игнорирования
 ├── opencode.json                           # Проектные настройки
-├── AGENTS.md                               # Инструкции верхнего уровня (44 строки)
+├── agents.md                               # Инструкции верхнего уровня (44 строки)
 ├── .opencode/
 │   ├── .gitignore
 │   ├── package.json
@@ -65,7 +65,7 @@ research-agent/
 |:-:|------|--------|-----------|
 | 1 | `opencode.json` | 644 B | Конфигурация |
 | 2 | `.opencode/setting.local.json` | 416 B | Конфигурация (локальная) |
-| 3 | `AGENTS.md` | ~1.2 KB | Инструкции верхнего уровня |
+| 3 | `agents.md` | ~1.2 KB | Инструкции верхнего уровня |
 | 4 | `.opencode/agents/researcher.md` | 5.9 KB | Описание агента (роль, безопасность, нейминг, процесс) |
 | 5 | `.opencode/package.json` | 64 B | Служебный |
 | 6 | `.opencode/.gitignore` | 63 B | Служебный |
@@ -79,7 +79,7 @@ research-agent/
 
 ```
 9 коммитов:
-da80b1e  Update AGENTS.md with pa-finance.2 content
+da80b1e  Update agents.md with pa-finance.2 content
 6de1605  Update report: add conclusions.md to file list and structure
 2cee02a  Add conclusions.md — project results, methods, and metrics
 c38a5c5  Supplement agent.md from pa-finance.2
@@ -99,7 +99,7 @@ e9c53d2  Add git commands log to session-history
 | Инструментов Playwright MCP | 22 |
 | Уровней настроек | 3 (global → agent → local) |
 | Разделов в researcher.md | 5 (роль, безопасность, нейминг, общие правила, процесс) |
-| Строк в AGENTS.md | 44 |
+| Строк в agents.md | 44 |
 | Git-коммитов | 9 |
 | Удалённый репозиторий | https://github.com/Nataly7608/research-agent |
 

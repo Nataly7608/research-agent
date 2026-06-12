@@ -11,7 +11,7 @@
 **Request:** Создай файл .md с описанием создания CLI-агента с базовой структурой, инструкциями и MCP-подключением. Опиши созданные файлы и полученную структуру агента. В структуре должны быть: файл проектных настроек, базовая структура разрешений. В agent.md добавь: 1. роль агента, 2. правила безопасности, 3. правило нейминга файлов.
 
 **Actions taken:**
-1. Explored the existing project structure (`opencode.json`, `.opencode/agents/researcher.md`, `AGENTS.md`, `research/`, `.opencode/skills/`)
+1. Explored the existing project structure (`opencode.json`, `.opencode/agents/researcher.md`, `agents.md`, `research/`, `.opencode/skills/`)
 2. Updated `.opencode/agents/researcher.md` — added 3 new sections:
    - **Section 1:** Agent role (responsibilities, key principles)
    - **Section 2:** Security rules (command policies, restrictions, external sources)
@@ -37,7 +37,7 @@
 **Request:** Проверь структуру проекта, объясни, где лежат настройки, создай текстовый отчет в папке reports/.
 
 **Actions taken:**
-1. Verified project structure — 4 top-level entries (`.opencode/`, `AGENTS.md`, `opencode.json`, `research/`)
+1. Verified project structure — 4 top-level entries (`.opencode/`, `agents.md`, `opencode.json`, `research/`)
 2. Analyzed both configuration levels:
    - **Level 1:** `opencode.json` — global config (agent, MCP, permissions, skills path)
    - **Level 2:** `.opencode/agents/researcher.md` — local agent instructions (role, security, naming, rules)
@@ -90,7 +90,7 @@ git init "C:\Users\user\Documents\research-agent"
 
 # 3. Проверка статуса в новом репозитории
 git -C "C:\Users\user\Documents\research-agent" status
-# → Untracked files: .gitignore, .opencode/, AGENTS.md,
+# → Untracked files: .gitignore, .opencode/, agents.md,
 #   opencode.json, reports/, research/
 
 # 4. Staging всех файлов
@@ -101,7 +101,7 @@ git -C "C:\Users\user\Documents\research-agent" commit -m "Initial commit"
 # → 7 files changed, 747 insertions(+)
 #   create mode 100644 .gitignore
 #   create mode 100644 .opencode/agents/researcher.md
-#   create mode 100644 AGENTS.md
+#   create mode 100644 agents.md
 #   create mode 100644 opencode.json
 #   create mode 100644 reports/structure-report.txt
 #   create mode 100644 research/cli-agent-creation.md
@@ -274,7 +274,7 @@ research-agent/
 ├── .git/                          # Git repository
 ├── .gitignore                     # Ignore rules
 ├── opencode.json                  # Project settings (agent, MCP, permissions)
-├── AGENTS.md                      # Top-level instructions
+├── agents.md                      # Top-level instructions
 ├── research/
 │   ├── cli-agent-creation.md      # Agent architecture documentation
 │   └── session-history.md         # Full conversation log (this file)

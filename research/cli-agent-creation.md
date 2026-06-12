@@ -17,7 +17,7 @@
 ```
 research-agent/
 ├── opencode.json                 # Проектные настройки и конфигурация
-├── AGENTS.md                     # Инструкции верхнего уровня
+├── agents.md                     # Инструкции верхнего уровня
 ├── research/                     # Папка для результатов исследований
 │   └── cli-agent-creation.md     # ← данный файл
 └── .opencode/                    # Системная директория OpenCode
@@ -35,7 +35,7 @@ research-agent/
 | Компонент | Назначение |
 |-----------|------------|
 | **opencode.json** | Центральный файл конфигурации проекта: агенты, MCP, разрешения |
-| **AGENTS.md** | Инструкции верхнего уровня, общие для всех агентов |
+| **agents.md** | Инструкции верхнего уровня, общие для всех агентов |
 | **.opencode/agents/researcher.md** | Описание агента: роль, правила безопасности, нейминг |
 | **.opencode/skills/** | Директория для дополнительных навыков агента |
 | **research/** | Выходная директория для отчётов, данных и артефактов |
@@ -51,7 +51,7 @@ research-agent/
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "researcher",
-  "instructions": ["AGENTS.md"],
+  "instructions": ["agents.md"],
   "agent": {
     "researcher": {
       "description": "Агент для исследований и анализа информации",
@@ -84,7 +84,7 @@ research-agent/
 |------|----------|----------|
 | `$schema` | URL JSON Schema | Ссылка на схему валидации конфига OpenCode |
 | `default_agent` | `"researcher"` | Агент, используемый по умолчанию |
-| `instructions` | `["AGENTS.md"]` | Файлы с инструкциями, загружаемые в систему |
+| `instructions` | `["agents.md"]` | Файлы с инструкциями, загружаемые в систему |
 | `agent.researcher` | объект | Конфигурация агента-исследователя |
 | `agent.researcher.mode` | `"primary"` | Режим: primary (основной) или secondary |
 | `agent.researcher.permission` | объект | **Базовая структура разрешений** (см. раздел 5) |
@@ -227,7 +227,7 @@ permission:
 | № | Файл | Назначение |
 |:-:|------|------------|
 | 1 | `opencode.json` | Проектные настройки: агент, MCP, разрешения, навыки |
-| 2 | `AGENTS.md` | Инструкции верхнего уровня для агентов |
+| 2 | `agents.md` | Инструкции верхнего уровня для агентов |
 | 3 | `.opencode/agents/researcher.md` | Описание агента: роль, безопасность, нейминг, правила работы |
 | 4 | `.opencode/package.json` | Зависимости OpenCode (`@opencode-ai/plugin`) |
 | 5 | `.opencode/.gitignore` | Исключение node_modules из репозитория |
@@ -245,7 +245,7 @@ research-agent/
 │   ├── mcp.playwright ◄─────────────── подключение MCP-сервера
 │   └── skills.paths ◄───────────────── путь к навыкам
 │
-├── AGENTS.md ◄─────── общие инструкции
+├── agents.md ◄─────── общие инструкции
 │
 ├── .opencode/agents/
 │   └── researcher.md ◄── полное описание агента
@@ -268,7 +268,7 @@ research-agent/
 Пользователь
     │
     ▼
-AGENTS.md (инструкции верхнего уровня)
+agents.md (инструкции верхнего уровня)
     │
     ▼
 opencode.json (выбор агента, проверка разрешений)
